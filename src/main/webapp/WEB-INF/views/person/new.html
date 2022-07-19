@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>New Person</title>
+    <style>
+        input{
+            font-size: 36px;
+        }
+        label{
+            font-size: 36px;
+        }
+    </style>
 </head>
 <body>
+
+<form th:method="POST" th:action="@{/person}" th:object="${person}">
+    <label for="name">Enter name:</label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="surname">Enter surname: </label>
+    <input type="text" th:field="*{surname}" id="surname">
+    <br/>
+    <label for="age">Enter age: </label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <br/>
+    <label for="phoneNumber">Enter phone number: </label>
+    <input type="text" th:field="*{phone_number}" id="phoneNumber">
+    <br/>
+    <input type="submit" value="create">
+</form>
 
 </body>
 </html>

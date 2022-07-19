@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>book</title>
+    <style>
+        p{
+            font-size: 36px;
+        }
+    </style>
 </head>
 <body>
-
+<p th:text="${book.getTitle() + ' ' + book.getAuthor()}">VALUE</p>
+<p th:text="${'yera of release: ' + book.getYear_of_release()}">VALUE</p>
+<p th:text="${book.getBook_id()}">VALUE</p>
 </body>
 </html>

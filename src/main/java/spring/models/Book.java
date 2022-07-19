@@ -1,7 +1,8 @@
 package spring.models;
 
 public class Book {
-    private int id; //будет инкрементироваться автоматически
+    private int book_id; //будет инкрементироваться автоматически (PK)
+    private int person_id; //FK
     private String title;
     private String author;
     private int year_of_release;
@@ -9,15 +10,15 @@ public class Book {
     public Book() {
     }
 
-    public Book(int id, String title, String author, int year_of_release) {
-        this.id = id;
+    public Book(int person_id, String title, String author, int year_of_release) {
+        this.person_id = person_id;
         this.title = title;
         this.author = author;
         this.year_of_release = year_of_release;
     }
 
-    public int getId() {
-        return id;
+    public int getBook_id() {
+        return book_id;
     }
 
     public String getTitle() {
@@ -32,8 +33,12 @@ public class Book {
         return year_of_release;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getPerson_id() {
+        return person_id;
+    }
+
+    public void setBook_id(int book_id) {
+        this.book_id = book_id;
     }
 
     public void setTitle(String title) {
@@ -46,5 +51,9 @@ public class Book {
 
     public void setYear_of_release(int year_of_release) {
         this.year_of_release = year_of_release;
+    }
+
+    public void setPerson_id(int person_id) {
+        this.person_id = person_id;
     }
 }

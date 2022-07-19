@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>person</title>
+    <title>show</title>
+    <style>
+        p{
+            font-size: 36px;
+        }
+    </style>
 </head>
 <body>
+
+<p th:text="${person.getName() + ' ' + person.getSurname()+' '+person.getAge()}">VALUE</p>
+<p th:text="${'phone number: ' + person.getPhone_number()}">VALUE</p>
+<p th:text="${person.getPerson_id()}">VALUE</p>
+
 
 </body>
 </html>

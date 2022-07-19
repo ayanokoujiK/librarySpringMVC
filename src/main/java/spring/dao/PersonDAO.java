@@ -21,4 +21,12 @@ public class PersonDAO {
     public List<Person> index(){
         return jdbcTemplate.query("SELECT*FROM person", new BeanPropertyRowMapper<>(Person.class));
     }
+
+    public Person show(int id) {
+        return jdbcTemplate.query("SELECT*FROM person WHERE person_id=?", new Object[]{id}, new BeanPropertyRowMapper<>(Person.class)).stream().findAny().orElse(null);
+    }
+
+    public void save(Person person) {
+        jdbcTemplate.update("INSERT INTO person(name, surname, age, phone_number) VALUES (?, ?, ?, ?)", person.getName(), person.getSurname(), person.getAge(), person.getPhone_number());
+    }
 }
