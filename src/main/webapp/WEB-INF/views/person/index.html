@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
+    <style>
+        a{
+            font-size: 28px;
+            word-spacing:25px;
+        }
+    </style>
 </head>
 <body>
 
-<div th:each="person : ${people}">
-    <p
-       th:text="${person.getName() + ' ' + person.getSurname()+' '+person.getAge()+' '+person.getPhone_number()}">user</p>
+<div th:each="person : ${persons}"><a
+        th:href="@{/person/{id}(id=${person.getPerson_id()})}"
+        th:text="${person.getName() + ', ' + person.getSurname()+', '+person.getAge()+', '+person.getPhone_number()}">user</a>
 </div>
 
 <br/>
 <hr/>
 
-<a href="/people/new">Create new person</a>
+<a style="word-spacing: normal" href="/person/new">Create new person</a>
+<br/>
+<a style="word-spacing: normal" href="/book">Books</a>
 
 </body>
 </html>

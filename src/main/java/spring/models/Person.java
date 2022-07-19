@@ -1,7 +1,7 @@
 package spring.models;
 
 public class Person {
-    private int id; //будет инкрементироваться автоматически
+    private int person_id; //будет инкрементироваться автоматически
     private String name;
     private String surname;
     private int age;
@@ -11,15 +11,15 @@ public class Person {
     }
 
     public Person(int id, String name, String surname, int age, String phone_number) {
-        this.id = id;
+        this.person_id = id;
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.phone_number = phone_number;
     }
 
-    public int getId() {
-        return id;
+    public int getPerson_id() {
+        return person_id;
     }
 
     public String getName() {
@@ -38,8 +38,8 @@ public class Person {
         return phone_number;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPerson_id(int person_id) {
+        this.person_id = person_id;
     }
 
     public void setName(String name) {
