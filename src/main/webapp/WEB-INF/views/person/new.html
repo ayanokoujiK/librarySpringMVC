@@ -14,6 +14,7 @@
 </head>
 <body>
 
+<label>register a new reader</label>
 <form th:method="POST" th:action="@{/person}" th:object="${person}">
     <label for="name">Enter name:</label>
     <input type="text" th:field="*{name}" id="name"/>

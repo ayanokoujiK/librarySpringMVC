@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import spring.dao.BookDAO;
 import spring.models.Book;
+import spring.models.Person;
 
 @Controller
 @RequestMapping("/book")
@@ -40,4 +41,21 @@ public class BookController {
         return "redirect:/book";
     }
 
+    @GetMapping("/{id}/edit")
+    public String edit(Model model, @PathVariable("id") int id){
+        model.addAttribute("book", bookDAO.show(id));
+        return "book/edit";
+    }
+
+    @PatchMapping("/{id}")
+    public String update(@ModelAttribute("book") Book book, @PathVariable("id") int id){
+        bookDAO.update(book, id);
+        return "redirect:/book";
+    }
+
+    @DeleteMapping("/{id}")
+    public String delete(@PathVariable("id") int id){
+     bookDAO.delete(id);
+     return "redirect:/book";
+    }
 }
