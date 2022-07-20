@@ -9,29 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="039d73d9-b62d-4264-b9b3-c14db35d4378" name="Changes" comment="подключены все необходимые зависимости для проекта">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/configs/Dispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/configs/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/controllers/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/controllers/PersonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/dao/BookDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/dao/PersonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/spring/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/show.html" afterDir="false" />
+    <list default="true" id="039d73d9-b62d-4264-b9b3-c14db35d4378" name="Changes" comment="Добавлены и полностью функционируют 2 из 4 функций CRUD, а именно CREATE и READ. Отформатирована часть HTML файлов, исправлены все ошибки, возникающие при запросах">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person/new.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="secondStage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,25 +59,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "27a251bde32904469a632b3811f2da65"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;27a251bde32904469a632b3811f2da65&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JavaUltimateAll\springCourse\librarySpringMVC\src\main\webapp\WEB-INF\views\person" />
@@ -196,7 +183,12 @@
       <workItem from="1657638318754" duration="743000" />
       <workItem from="1657639137260" duration="7958000" />
       <workItem from="1657872790205" duration="1193000" />
-      <workItem from="1657974441032" duration="12323000" />
+      <workItem from="1657974441032" duration="13837000" />
+      <workItem from="1658049888432" duration="1618000" />
+      <workItem from="1658140972779" duration="5101000" />
+      <workItem from="1658231826146" duration="18510000" />
+      <workItem from="1658265421576" duration="1205000" />
+      <workItem from="1658313124654" duration="5505000" />
     </task>
     <task id="LOCAL-00001" summary="подключены все необходимые зависимости для проекта">
       <created>1657639291016</created>
@@ -205,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657639291016</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="изменения:&#10;была заложена основа проекта, подключена субд(postgresql), созданы все необходимые классы, по запросу с url &quot;/person&quot; или &quot;/book&quot; можно просматривать всех добавленных людей и книги в базу данных">
+      <created>1657998274530</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657998274530</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавлены и полностью функционируют 2 из 4 функций CRUD, а именно CREATE и READ. Отформатирована часть HTML файлов, исправлены все ошибки, возникающие при запросах">
+      <created>1658241788115</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658241788116</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +230,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="подключены все необходимые зависимости для проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="подключены все необходимые зависимости для проекта" />
+    <MESSAGE value="изменения:&#10;была заложена основа проекта, подключена субд(postgresql), созданы все необходимые классы, по запросу с url &quot;/person&quot; или &quot;/book&quot; можно просматривать всех добавленных людей и книги в базу данных" />
+    <MESSAGE value="Добавлены и полностью функционируют 2 из 4 функций CRUD, а именно CREATE и READ. Отформатирована часть HTML файлов, исправлены все ошибки, возникающие при запросах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены и полностью функционируют 2 из 4 функций CRUD, а именно CREATE и READ. Отформатирована часть HTML файлов, исправлены все ошибки, возникающие при запросах" />
   </component>
 </project>

@@ -1,10 +1,24 @@
 package spring.models;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Person {
     private int person_id; //будет инкрементироваться автоматически
+
+    @NotEmpty(message = "name should not be empty")
+    @Size(min = 2, max = 40, message = "name should be between 2 and 40 characters")
     private String name;
+
+    @NotEmpty(message = "surname should not be empty")
+    @Size(min = 2, max = 40, message = "surname should be between 2 and 40 characters")
     private String surname;
+
+    @Min(value = 5, message = "age should be greater than 5")
     private int age;
+
+    @NotEmpty(message = "phone number should not be empty")
     private String phone_number;
 
     public Person() {

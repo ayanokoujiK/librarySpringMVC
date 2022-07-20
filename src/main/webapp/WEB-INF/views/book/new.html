@@ -10,6 +10,10 @@
         label{
             font-size: 36px;
         }
+        div{
+            color: red;
+            font-size: 26px;
+        }
     </style>
 </head>
 <body>
@@ -18,17 +22,22 @@
 <form th:method="POST" th:action="@{/book}" th:object="${book}">
     <label for="title">Enter title:</label>
     <input type="text" th:field="*{title}" id="title"/>
+    <div th:if="${#fields.hasErrors('title')}" th:errors="*{title}">error</div>
     <br/>
     <label for="author">Enter author:</label>
     <input type="text" th:field="*{author}" id="author">
+    <div th:if="${#fields.hasErrors('author')}" th:errors="*{author}">error</div>
     <br/>
     <label for="year_of_release">Enter year of release:</label>
     <input type="text" th:field="*{year_of_release}" id="year_of_release">
+    <div th:if="${#fields.hasErrors('year_of_release')}" th:errors="*{year_of_release}">error</div>
     <br/>
     <label for="person_id">Assign a book:</label>
     <input type="text" th:field="*{person_id}" id="person_id">
+    <div th:if="${#fields.hasErrors('person_id')}" th:errors="*{person_id}">error</div>
+
     <br/>
-    <input type="submit" value="create">
+    <input type="submit" value="create"/>
 </form>
 </body>
 </html>

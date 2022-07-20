@@ -1,10 +1,23 @@
 package spring.models;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Book {
     private int book_id; //будет инкрементироваться автоматически (PK)
+
     private int person_id; //FK
+
+    @NotEmpty(message = "title should not be empty")
+    @Size(min = 1, max = 100, message = "title should be between 1 and 100 characters")
     private String title;
+
+    @NotEmpty(message = "author should not be empty")
+    @Size(min = 1, max = 100, message = "author should be between 1 and 100 characters")
     private String author;
+
+    @Min(value = 1700, message = "year should be greater than 1700")
     private int year_of_release;
 
     public Book() {
