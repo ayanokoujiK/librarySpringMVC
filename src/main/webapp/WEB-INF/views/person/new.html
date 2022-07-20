@@ -10,26 +10,41 @@
         label{
             font-size: 36px;
         }
+        div{
+            color: red;
+            font-size: 26px;
+        }
     </style>
 </head>
 <body>
 
-<label>register a new reader</label>
+<label>Register a new reader</label>
+
 <form th:method="POST" th:action="@{/person}" th:object="${person}">
+
     <label for="name">Enter name:</label>
     <input type="text" th:field="*{name}" id="name"/>
+    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">error</div>
     <br/>
-    <label for="surname">Enter surname: </label>
-    <input type="text" th:field="*{surname}" id="surname">
+
+    <label for="surname">Enter surname:</label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <div th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">error</div>
     <br/>
-    <label for="age">Enter age: </label>
+
+    <label for="age">Enter age:</label>
     <input type="text" th:field="*{age}" id="age"/>
+    <div th:if="${#fields.hasErrors('age')}" th:errors="*{age}">error</div>
     <br/>
-    <label for="phoneNumber">Enter phone number: </label>
-    <input type="text" th:field="*{phone_number}" id="phoneNumber">
+
+    <label for="phone_number">Enter phone number:</label>
+    <input type="text" th:field="*{phone_number}" id="phone_number"/>
+    <div th:if="${#fields.hasErrors('phone_number')}" th:errors="*{phone_number}">error</div>
     <br/>
-    <input type="submit" value="create">
+
+    <input type="submit" value="create"/>
 </form>
+
 
 </body>
 </html>

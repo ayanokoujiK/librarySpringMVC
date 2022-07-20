@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>edit</title>
+    <style>
+        input{
+            font-size: 36px;
+        }
+        label{
+            font-size: 36px;
+        }
+        div{
+            color: red;
+            font-size: 26px;
+        }
+    </style>
 </head>
 <body>
 
 <form th:method="PATCH" th:action="@{/person/{id}(id=${person.getPerson_id()})}" th:object="${person}">
-    <label for="name">Enter name: </label>
+    <label for="name">Enter name:</label>
     <input type="text" th:field="*{name}" id="name"/>
+    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">error</div>
     <br/>
-    <label for="surname">Enter surname: </label>
-    <input type="text" th:field="*{surname}" id="surname">
+
+    <label for="surname">Enter surname:</label>
+    <input type="text" th:field="*{surname}" id="surname"/>
+    <div th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">error</div>
     <br/>
-    <label for="age">Enter age: </label>
-    <input type="text" th:field="*{age}" id="age">
+
+    <label for="age">Enter age:</label>
+    <input type="text" th:field="*{age}" id="age"/>
+    <div th:if="${#fields.hasErrors('age')}" th:errors="*{age}">error</div>
     <br/>
-    <label for="phone">Enter phone number: </label>
-    <input type="text" th:field="*{phone_number}" id="phone">
+
+    <label for="phone_number">Enter phone number:</label>
+    <input type="text" th:field="*{phone_number}" id="phone_number"/>
+    <div th:if="${#fields.hasErrors('phone_number')}" th:errors="*{phone_number}">error</div>
     <br/>
     <input type="submit" value="update"/>
 </form>
